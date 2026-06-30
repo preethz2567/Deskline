@@ -1,0 +1,12 @@
+/* App.css — imports all style modules */
+@import './styles/login.css';
+@import './styles/layout.css';
+@import './styles/components.css';
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+.auth-loading {
+  display: flex; align-items: center; justify-content: center; min-height: 100vh;
+  font-family: 'Inter', sans-serif; font-size: 0.875rem;
+  color: #6b6b6b; letter-spacing: 0.05em; text-transform: uppercase;
+}

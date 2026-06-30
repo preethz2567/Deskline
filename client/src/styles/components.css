@@ -1,0 +1,90 @@
+/* components.css — Buttons, Forms, Badges, Tables, Tickets, Stats, States */
+
+.btn-primary {
+  display: block; width: 100%;
+  margin-top: 1.75rem; padding: 0.78rem 1.25rem;
+  border: none; border-radius: 0;
+  background: #0d0d0d; color: #fff;
+  font-family: 'Space Grotesk', sans-serif; font-size: 0.875rem; font-weight: 600; letter-spacing: 0.04em;
+  cursor: pointer; text-align: center;
+  transition: background 0.15s ease, transform 0.1s ease;
+  position: relative; overflow: hidden;
+}
+.btn-primary::after { content: ''; position: absolute; inset: 0; background: rgba(255,255,255,0); transition: background 0.15s ease; }
+.btn-primary:hover { background: #1d6ef7; }
+.btn-primary:active { transform: translateY(1px); }
+.btn-primary:disabled { background: #c4c4c4; cursor: not-allowed; transform: none; }
+.btn-primary .btn-spinner {
+  display: inline-block; width: 12px; height: 12px;
+  border: 2px solid rgba(255,255,255,0.3); border-top-color: #fff;
+  border-radius: 50%; animation: spin 0.6s linear infinite;
+  margin-right: 0.5rem; vertical-align: middle;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.btn-logout {
+  padding: 0.4rem 0.875rem;
+  border: 1px solid #2e2e2e; background: transparent; color: #c4c4c4;
+  font-family: 'Inter', sans-serif; font-size: 0.78rem; font-weight: 500;
+  cursor: pointer; border-radius: 0; width: auto; margin-top: 0; letter-spacing: 0.03em;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+.btn-logout:hover { border-color: #9e9e9e; color: #fff; }
+
+/* Form Fields */
+.field-group { margin-bottom: 1.25rem; }
+.field-label { display: block; font-family: 'Inter', sans-serif; font-size: 0.72rem; font-weight: 600; color: #2e2e2e; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.5rem; }
+.field-input {
+  width: 100%; padding: 0.7rem 0.875rem;
+  border: 1.5px solid #e0e0e0; border-radius: 0;
+  font-family: 'Inter', sans-serif; font-size: 0.9rem; color: #0d0d0d; background: #fff;
+  outline: none; transition: border-color 0.15s ease; -webkit-appearance: none;
+}
+.field-input:focus { border-color: #1d6ef7; }
+.field-input[aria-invalid="true"] { border-color: #d32f2f; }
+.field-error { font-family: 'Inter', sans-serif; font-size: 0.78rem; color: #d32f2f; margin-top: 0.35rem; display: flex; align-items: center; gap: 0.3rem; }
+.server-error-box { border: 1.5px solid #d32f2f; background: #fff0f0; padding: 0.65rem 0.875rem; margin: 0.5rem 0; font-family: 'Inter', sans-serif; font-size: 0.85rem; color: #d32f2f; }
+
+/* Status Badges */
+.status-badge { display: inline-block; font-family: 'Inter', sans-serif; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.25rem 0.6rem; border-radius: 0; white-space: nowrap; }
+.status-open  { background: #eff6ff; color: #1558d4; border: 1px solid #dbeafe; }
+.status-closed { background: #f0f0f0; color: #6b6b6b; border: 1px solid #e0e0e0; }
+
+/* Data Table (Admin) */
+.data-table-wrap { background: #fff; border: 1px solid #e0e0e0; overflow: hidden; }
+.data-table { width: 100%; border-collapse: collapse; font-family: 'Inter', sans-serif; }
+.data-table thead { background: #0d0d0d; }
+.data-table th { text-align: left; padding: 0.7rem 1.1rem; font-size: 0.68rem; font-weight: 600; color: #9e9e9e; letter-spacing: 0.12em; text-transform: uppercase; border: none; }
+.data-table td { padding: 0.85rem 1.1rem; font-size: 0.875rem; color: #2e2e2e; border-bottom: 1px solid #f0f0f0; }
+.data-table tbody tr:last-child td { border-bottom: none; }
+.data-table tbody tr { transition: background 0.1s ease; }
+.data-table tbody tr:hover { background: #fafafa; }
+.data-table .col-id { font-size: 0.78rem; color: #9e9e9e; font-variant-numeric: tabular-nums; width: 60px; }
+.data-table .col-title { font-weight: 500; color: #0d0d0d; }
+
+/* Ticket List (User) */
+.ticket-list { list-style: none; background: #fff; border: 1px solid #e0e0e0; }
+.ticket-row { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 1rem; padding: 1rem 1.25rem; border-bottom: 1px solid #f0f0f0; transition: background 0.1s ease; }
+.ticket-row:last-child { border-bottom: none; }
+.ticket-row:hover { background: #fafafa; }
+.ticket-row-title { font-family: 'Inter', sans-serif; font-size: 0.875rem; font-weight: 500; color: #0d0d0d; }
+.ticket-row-meta { font-family: 'Inter', sans-serif; font-size: 0.75rem; color: #9e9e9e; margin-top: 0.15rem; }
+
+/* Stats Row */
+.stats-row { display: flex; gap: 1px; background: #e0e0e0; margin-bottom: 1.75rem; }
+.stat-card { flex: 1; background: #fff; padding: 1.25rem 1.5rem; }
+.stat-card-value { font-family: 'Space Grotesk', sans-serif; font-size: 1.75rem; font-weight: 700; color: #0d0d0d; letter-spacing: -0.03em; line-height: 1; margin-bottom: 0.3rem; }
+.stat-card-label { font-family: 'Inter', sans-serif; font-size: 0.72rem; font-weight: 600; color: #9e9e9e; letter-spacing: 0.1em; text-transform: uppercase; }
+.stat-card-accent { border-top: 2px solid #1d6ef7; }
+
+/* Empty State */
+.empty-state { text-align: center; padding: 3.5rem 2rem; background: #fff; border: 1px solid #e0e0e0; }
+.empty-state-icon { width: 40px; height: 40px; margin: 0 auto 1rem; color: #c4c4c4; }
+.empty-state-title { font-family: 'Space Grotesk', sans-serif; font-size: 1rem; font-weight: 600; color: #0d0d0d; margin-bottom: 0.35rem; }
+.empty-state-sub { font-family: 'Inter', sans-serif; font-size: 0.85rem; color: #9e9e9e; }
+
+/* Loading / Error / Info */
+.status-row { padding: 1.5rem; font-family: 'Inter', sans-serif; font-size: 0.875rem; color: #6b6b6b; background: #fff; border: 1px solid #e0e0e0; }
+.error-row { padding: 0.8rem 1rem; font-family: 'Inter', sans-serif; font-size: 0.875rem; color: #d32f2f; background: #fff0f0; border: 1.5px solid #d32f2f; border-left-width: 4px; }
+.info-block { margin-top: 1.5rem; padding: 0.875rem 1.1rem; background: #fafafa; border: 1px solid #e0e0e0; border-left: 3px solid #1d6ef7; font-family: 'Inter', sans-serif; font-size: 0.85rem; color: #484848; line-height: 1.6; }
+.info-block a { color: #1d6ef7; font-weight: 600; }
