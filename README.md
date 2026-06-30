@@ -222,9 +222,9 @@ All 7 tests pass with zero configuration required beyond `npm install`.
 
 | Approach | XSS Risk | CSRF Risk | Survives Refresh |
 |---|---|---|---|
-| `localStorage` | ⚠️ High | ✅ None | ✅ Yes |
-| `httpOnly` cookie | ✅ None | ⚠️ Needs CSRF token | ✅ Yes |
-| **In-memory (this app)** | **✅ None** | **✅ None** | ❌ No |
+| `localStorage` |  High |  None |  Yes |
+| `httpOnly` cookie |  None |  Needs CSRF token |  Yes |
+| **In-memory (this app)** | ** None** | ** None** |  No |
 
 In-memory was chosen because:
 1. **XSS cannot read memory** — malicious scripts cannot steal the token
@@ -234,6 +234,18 @@ In-memory was chosen because:
 For production, upgrading to an `httpOnly` cookie + CSRF token is recommended.
 
 ---
+
+
+## Glimpse of it
+<img width="1918" height="1020" alt="Screenshot 2026-06-29 173337" src="https://github.com/user-attachments/assets/020de82b-cd1e-4b17-816e-7d31728fe85a" />
+<img width="1897" height="1073" alt="Screenshot 2026-06-29 173359" src="https://github.com/user-attachments/assets/37aa1f52-cfe8-4842-b0dc-de5ece4b0e83" />
+<img width="1918" height="1082" alt="Screenshot 2026-06-29 173407" src="https://github.com/user-attachments/assets/2b533045-63e4-445c-8b3f-a23634d16ee2" />
+<img width="1918" height="1020" alt="Screenshot 2026-06-29 173428" src="https://github.com/user-attachments/assets/fe9d4dbb-af74-425a-b250-5e2a2ef9b2c5" />
+<img width="1918" height="1080" alt="Screenshot 2026-06-29 173435" src="https://github.com/user-attachments/assets/8f2eb4c3-4d22-4e24-9ca2-7d5f32c201dc" />
+
+
+
+
 
 ## Branch Strategy
 
